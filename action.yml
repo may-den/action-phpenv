@@ -7,5 +7,5 @@ runs:
     - run: curl -L https://raw.githubusercontent.com/phpenv/phpenv-installer/master/bin/phpenv-installer | PHPENV_ROOT=$HOME/.phpenv-root bash
       shell: bash
 
-    - run: mkdir -p $HOME/.local/bin && ln -s $HOME/.phpenv/root/bin/phpenv $HOME/.local/bin/phpenv
+    - run: mkdir -p $HOME/.local/bin && ln -s $HOME/.phpenv-root/bin/phpenv $HOME/.local/bin/phpenv
       shell: bash
