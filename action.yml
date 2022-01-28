@@ -1,0 +1,11 @@
+name: "Install phpenv"
+description: "Adds phpenv to the ubuntu-latest image so we can easily switch between php versions"
+author: "borb"
+runs:
+  using: "composite"
+  steps:
+    - run: curl -L https://raw.githubusercontent.com/phpenv/phpenv-installer/master/bin/phpenv-installer | PHPENV_ROOT=$HOME/.phpenv-root bash
+      shell: bash
+
+    - run: ln -s $HOME/.phpenv/root/bin/phpenv $HOME/.local/bin/phpenv
+      shell: bash
